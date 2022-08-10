@@ -12,7 +12,7 @@ const player = {
         '#btnPlay' : 'play',
         '#btnSlow' : 'slow',
         '#btnNormal' : 'normal',
-        'btnFast' : 'fast'
+        '#btnFast' : 'fast'
     },
     n : 1,
     init : () => {
@@ -62,7 +62,7 @@ const player = {
     },
     fast : () => {
         player.pause()
-        player.time = 1
+        player.time = 0
         player.play()
         console.log('这下快速了')
     }

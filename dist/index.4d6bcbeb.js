@@ -547,7 +547,7 @@ const player = {
         "#btnPlay": "play",
         "#btnSlow": "slow",
         "#btnNormal": "normal",
-        "btnFast": "fast"
+        "#btnFast": "fast"
     },
     n: 1,
     init: ()=>{
@@ -595,7 +595,7 @@ const player = {
     },
     fast: ()=>{
         player.pause();
-        player.time = 1;
+        player.time = 0;
         player.play();
         console.log("\u8FD9\u4E0B\u5FEB\u901F\u4E86");
     }
@@ -611,6 +611,7 @@ const string = `
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition : all 0.3s;
 }
 
 *::before {
@@ -622,22 +623,18 @@ const string = `
 }
 
 .punchy {
-    border: 1px solid green;
     background-color: #0077b6;
     height: 55vh;
 }
 
 .container {
     position: relative;
-    /*height: 500px;*/
-    /*width: 500px;*/
     height: 100%;
     width: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
-    border: 1px solid blue;
     overflow: hidden;
 }
 
@@ -659,7 +656,6 @@ const string = `
 }
 
 .head {
-    /*border: 1px solid red;*/
     top: 35%;
     left: 25%;
     border-radius: 50% 50% 40% 40%;
@@ -669,7 +665,6 @@ const string = `
 }
 
 .topHead {
-    /*border: 1px solid blue;*/
     width: 100%;
     height: 50%;
     border-radius: 250px 250px 5px 5px;
@@ -821,7 +816,6 @@ const string = `
     left: 7%;
     width: 210px;
     height: 100px;
-    /*border: 1px solid red;*/
 }
 
 .mouth::before,
