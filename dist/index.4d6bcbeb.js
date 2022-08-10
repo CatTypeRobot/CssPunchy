@@ -579,29 +579,24 @@ const player = {
     },
     pause: ()=>{
         window.clearInterval(player.id);
-        console.log("\u8FD9\u4E0B\u6682\u505C\u4E86");
     },
     slow: ()=>{
         player.pause();
         player.time = 300;
         player.play();
-        console.log("\u8FD9\u4E0B\u6162\u901F\u4E86");
     },
     normal: ()=>{
         player.pause();
         player.time = 150;
         player.play();
-        console.log("\u8FD9\u4E0B\u4E2D\u901F\u4E86");
     },
     fast: ()=>{
         player.pause();
         player.time = 0;
         player.play();
-        console.log("\u8FD9\u4E0B\u5FEB\u901F\u4E86");
     }
 };
-player.init() // TODO : 解决无法快速播放的bug
-;
+player.init();
 
 },{"./css.js":"apd2l","@parcel/transformer-js/src/esmodule-helpers.js":"aZ75Z"}],"apd2l":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");

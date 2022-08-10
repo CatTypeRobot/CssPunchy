@@ -46,28 +46,22 @@ const player = {
     },
     pause : () => {
         window.clearInterval(player.id)
-        console.log('这下暂停了')
     },
     slow : () => {
         player.pause()
         player.time = 300
         player.play()
-        console.log('这下慢速了')
     },
     normal : () => {
         player.pause()
         player.time = 150
         player.play()
-        console.log('这下中速了')
     },
     fast : () => {
         player.pause()
         player.time = 0
         player.play()
-        console.log('这下快速了')
     }
 }
 
 player.init()
-
-// TODO : 解决无法快速播放的bug
