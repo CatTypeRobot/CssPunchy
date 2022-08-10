@@ -8,32 +8,85 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
-    <div class="head">
-        <div class="topHead">
-            <div class="leftEye">
-                <div class="eyeball"></div>
-                <div class="eyelid"></div>
+<style id="demo2"></style>
+<div id="demo"></div>
+<div id="buttons">
+    <button id="btnPause">暂停</button>
+    <button id="btnPlay">播放</button>
+    <button id="btnSlow">慢速</button>
+    <button id="btnNormal">中速</button>
+    <button id="btnFast">快速</button>
+</div>
+<style>
+    * {box-sizing: border-box;}
+    *::before, *::after {box-sizing: border-box;}
+    #buttons {
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        margin-top: 65vh;
+        margin-right: 10px;
+    }
+    #buttons > button {
+        margin-bottom: 10px;
+        padding: 4px 8px;
+    }
+    #demo2 {
+        display: none;
+    }
+    #demo {
+        position: fixed;
+        height: 45vh;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border: 1px solid red;
+        overflow-y: auto;
+    }
+    #demo::-webkit-scrollbar {
+        display: none;
+    }
+    #html {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50vh;
+    }
+</style>
+<div class="punchy">
+    <div class="container">
+        <div class="head">
+            <div class="topHead">
+                <div class="leftEye">
+                    <div class="eyeball"></div>
+                    <div class="eyelid"></div>
+                </div>
+                <div class="rightEye">
+                    <div class="eyeball"></div>
+                    <div class="eyelid"></div>
+                </div>
             </div>
-            <div class="rightEye">
-                <div class="eyeball"></div>
-                <div class="eyelid"></div>
+            <div class="leftEar">
+                <div class="innerEar"></div>
             </div>
+            <div class="rightEar">
+                <div class="innerEar"></div>
+            </div>
+            <div class="mouth">
+                <div class="midMouth"></div>
+            </div>
+            <div class="whisker1"></div>
+            <div class="whisker2"></div>
+            <div class="whisker3"></div>
         </div>
-        <div class="leftEar">
-            <div class="innerEar"></div>
-        </div>
-        <div class="rightEar">
-            <div class="innerEar"></div>
-        </div>
-        <div class="mouth">
-            <div class="midMouth"></div>
-        </div>
-        <div class="whisker1"></div>
-        <div class="whisker2"></div>
-        <div class="whisker3"></div>
     </div>
 </div>
-<script src="main.js"></script>
+<script src="main.js" type="module"></script>
 </body>
 </html>
+
+<!--TODO: 明天写JS-->
